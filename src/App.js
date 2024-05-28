@@ -12,10 +12,9 @@ import { instantMeiliSearch } from "@meilisearch/instant-meilisearch";
 
 import 'bulma/css/bulma.min.css'; // Import Bulma CSS
 const host_url = process.env.REACT_APP_BACKEND_SERVER
-const api_key = process.env.REACT_APP_API_KEY
 const searchClient = instantMeiliSearch(
-    host_url,
-    api_key
+    process.env.REACT_APP_BACKEND_SERVER,
+   process.env.REACT_APP_API_KEY
 );
 
 console.log(host_url)
